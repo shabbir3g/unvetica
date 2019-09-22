@@ -1,0 +1,351 @@
+@media all and (max-width: 991px){
+	.toogle-button{
+		display: block;
+	}
+	.header-top-fixed{
+		height: inherit;
+	}
+	.header-top-fixed.shrink {
+		height: inherit;
+	}
+	.top-right-menu {
+		float: none;
+	}
+	.top-right-menu li {
+		display: inline;
+		padding: 0px 3px;
+	}	
+	.banner-content {
+	width: 97%;
+	margin: auto;
+	position: relative;
+	top: -94px;
+}
+.banner-text {
+	color: #fff;
+	margin-top: 47px;
+	float: none;
+	text-align: center;
+}
+.banner-video {
+	height: 403px;
+}
+.unvetica-logo {
+	padding-top: 86px;
+}
+.about-section .row {
+	width: 100%;
+}
+.checker-domain-row {
+	padding: 3px 0;
+}
+.checker-domain-row {
+	width: 100%;
+	margin: auto;
+}
+.domain-check input[type="submit"] {
+	margin-top: 20px;
+}
+.single-image-blog {
+	width: 100%;
+	height: inherit;
+	box-shadow: 18px 24px 118px #561144;
+}
+.do-right-text {
+	padding: 0px 0;
+}
+.single-image-blog a {
+	position: absolute;
+	bottom: 13px;
+	right: 10px;
+}
+.single-image-blog a img {
+	width: 137px;
+}
+.single-image-blog {
+	position: relative;
+}
+.image-button {
+	bottom: -2px;
+	padding: 0px 20px;
+}
+.image-button a {
+	font-size: 10px;
+}
+.image-button h2 {
+	font-size: 16px;
+}
+.single-blog {
+	height: inherit;
+}
+.p-pic {
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+.author-name h2 {
+	font-size: 13px;
+}
+.author-name span {
+	margin-right: 4px;
+}
+.download-icon {
+	top: -70px;
+}
+.blog-content p {
+	font-size: 11px;
+}
+.signup-form {
+	padding: 0;
+}
+.signup-text {
+	padding: 63px 0;
+}
+.signup-form input[type="text"], .signup-form input[type="email"] {
+	width: 100%;
+}
+.social-icons li {
+	height: 39px;
+}
+.social-icons li img {
+	width: 36px;
+}
+.contact-footer {
+	text-align: left;
+	width: 100%;
+	margin: 28px auto;
+}
+.contact-footer span {
+	font-family: 'BebasNeueBook';
+	color: #fff;
+	font-size: 20px;
+}
+.footer-bottom {
+	text-align: center;
+}
+.footer-bottom-logo a {
+	display: block;
+}
+.text-number {
+	float: none;
+	text-align: center;
+	margin: 20px auto;
+	width: 88px;
+}
+}
+@media all and (max-width: 767px){
+	.navbar-brand {
+	width: 200px;
+	}
+	.navbar-brand img{
+		width: 100%;
+	}
+	.navbar-nav{
+		text-align: center;
+	}
+	.top-left-menu {
+	float: none;
+}
+.header-top-fixed {
+	top: inherit;
+}
+header {
+	margin-bottom: 76px;
+}
+.about-section .about-sec {
+	margin: 26px auto;
+	width: 88%;
+}
+.about-sec p {
+	margin-top: 59px;
+}
+.service-sec {
+	margin-top: 36px;
+}
+.about-section {
+	background-size: 113% 129%;
+	background-position: -46px;
+}
+.about-sec a {
+	padding: 6px 29px;
+	margin-top: -5px;
+}
+.about-sec h2 {
+	font-family: 'BebasNeueBold';
+	color: #ffffff;
+	font-size: 34px;
+}
+.unvetica-logo img {
+	margin-top: 59px;
+}
+header {
+	margin-bottom: 0px;
+}
+.do-right-text {
+	padding: 19px 0;
+}
+.checker-domain-row h5 {
+	margin-top: 15px;
+}
+.domain-check {
+	padding: 23px 0;
+}
+.domain-check span {
+	padding: 0px 0px;
+	font-size: 14;
+}
+.checker-domain-row h2 {
+	font-size: 24px;
+}
+.single-counter div {
+	height: inherit;
+	border: none;
+}
+.social-icons li {
+	width: 8%;
+	float: none;
+	display: inline;
+}
+.footer-top a {
+	display: block;
+	width: 27%;
+	text-align: center;
+	padding: 13px 0;
+	font-family: 'BebasNeueRegular';
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	margin: auto;
+	display: bl;
+}
+.footer-top a {
+	display: block;
+	width: 27%;
+	text-align: center;
+	padding: 13px 0;
+	font-family: 'BebasNeueRegular';
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	margin: auto;
+	display: bl;
+}
+.contact-footer {
+	text-align: center;
+	width: 100%;
+	margin: 28px auto;
+}
+.navbar-brand {
+	padding: 0px 15px;
+}
+}
+@media all and (max-width: 414px){
+	.about-section {
+		background-size: 124% 134%;
+		background-position: -37px;
+	}
+	.service-sec h2 {
+		font-size: 28px;
+	}
+	.side-space {
+		border-left: 30px solid #000;
+		border-right: 30px solid #000;
+	}
+	.left-sidebar p {
+		font-size: 14px;
+	}
+	.right-sidebar p {
+		font-size: 14px;
+	}
+	.right-sidebar {
+	right: -77px;
+}
+.banner-text {
+	color: #fff;
+	margin-top: 87px;
+	float: none;
+	text-align: center;
+}
+.banner-video {
+	height: 291px;
+}
+.download-icon {
+	top: -20px;
+}
+.signup-text h2 {
+	font-family: 'BebasNeueBold';
+	color: #ffffff;
+	font-size: 24px;
+}
+.signup-text p {
+	font-size: 11px;
+}
+.row.footer-middle {
+	text-align: center;
+}
+.do-right-text h2 {
+	font-size: 24px;
+}
+.do-right-text h4 {
+	font-size: 14px;
+	padding: 4px 0;
+}
+.do-right-text p {
+	font-size: 11px;
+}
+.single-blog-area {
+	padding-bottom: 0;
+}
+.blog-posts h1 {
+	font-size: 30px;
+	margin-top: 0px;
+}
+.recent-blog h2 {
+	font-size: 16px;
+}
+.show-all a {
+	font-size: 13px;
+}
+.footer-bottom {
+	padding-top: 0px;
+}
+.copyright-section p {
+	font-size: 11px;
+}
+.single-counter {
+	padding: 30px 0;
+}
+.domain-check input[type="submit"] {
+	font-size: 12px;;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+.domain-check input[type="text"] {
+	font-size: 11px;
+	padding: 8px 15px;
+}
+.domain-check span {
+	font-size: 14px;
+}
+.single-counter img {
+	height: 35px;
+}
+.header-top {
+	text-align: center;
+}
+.header-top ul li img {
+	display: none;
+}
+.header-top {
+	padding: 7px 0px;
+	height: 67px;
+}
+.header-top ul {
+  margin: 0;
+  padding: 0;
+}
+.header-top ul li {
+  padding: 0px 13px;
+  text-align: center;
+}
+}
