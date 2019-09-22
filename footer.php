@@ -74,7 +74,11 @@
 						<div class="col-md-7"> 
 							<div class="row"> 
 								<div class="col-lg-3 col-md-12"> 
-									<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/images/logo.png" alt=""></a>
+
+								<?php $footer_logo =  get_field('footer_logo','options'); 
+								if($footer_logo):  ?>
+								<a href="<?php echo bloginfo('home'); ?>"><img src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['title']; ?>" /></a>
+							  	<?php endif; ?>
 								</div>
 								<div class="col-lg-3 col-md-12"> 
 									<h2>Designed Ethically</h2>
@@ -102,14 +106,30 @@
 
 
 
+	<?php 
 
+	$website_layout =  get_field('website_layout','options'); 
+
+		if($website_layout == 'box'): ?>
 		<div class="left-sidebar"> 
-			<p>LOREM IPSUM DOLOR SIT AMET</p>
+
+			<?php $left_area_text =  get_field('left_area_text','options'); 
+			if($left_area_text):  ?>
+				<p><?php echo $left_area_text; ?></p>
+			<?php endif; ?>
 		</div>
-		<div class="right-sidebar"> 
-			<p>FACEBOOK / TWITTER / INSTAGRAM / PINTEREST</p>
+		<div class="right-sidebar">
+			<?php 
+
+		  	wp_nav_menu([
+		  		'theme_location'	=> 'right-social-menu',
+		  	]);
+
+		  	 ?>
+			
 		</div>
 
+	<?php endif; ?>
 
 	
 	 </div>

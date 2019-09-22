@@ -51,12 +51,35 @@ if ( ! function_exists( 'unvetica_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'main-menu' =>  'Main Menu',
+			'left-menu' =>  'Top Left Menu',
+			'right-menu' =>  'Top Right Menu',
+			'right-social-menu' =>  'Right Social Menu',
 		) );
 		
 		function default_menu(){
 			
 			echo '<ul class="navbar-nav">';
-			echo '<li><a href="'.home_url().'">Home</a></li>';
+			echo '<li class="current-menu-item" ><a href="'.home_url().'">Home</a></li>';
+			echo '</ul>';
+			
+		}
+
+		function left_menu(){
+			
+			echo '<ul class="top-left-menu">';
+			echo '<li class="current-menu-item" >';
+			echo '<img src="'.get_template_directory_uri().'/images/career.png" alt="">';
+			echo '<a href="'.home_url().'">Top Left</a></li>';
+			echo '</ul>';
+			
+		}
+
+		function right_menu(){
+			
+			echo '<ul class="top-right-menu">';
+			echo '<li class="current-menu-item" >';
+			echo '<img src="'.get_template_directory_uri().'/images/account.png" alt="">';
+			echo '<a href="'.home_url().'">Top Right</a></li>';
 			echo '</ul>';
 			
 		}
@@ -256,13 +279,6 @@ function unvetica_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'unvetica_scripts' );
-
-
-/**
- * Redux include
- */
-require get_template_directory() . '/inc/opt/ReduxCore/framework.php';
-require get_template_directory() . '/inc/opt/sample/config.php';
 
 
 /**

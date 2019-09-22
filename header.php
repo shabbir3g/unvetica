@@ -24,7 +24,10 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		
-	
+		<?php $favicon_upload =  get_field('favicon_upload','options'); 
+		if($favicon_upload):  ?>
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $favicon_upload['url']; ?>" />
+		<?php endif; ?>
 	
 		<?php wp_head(); ?>
     </head>
@@ -34,74 +37,110 @@
         <![endif]-->
       <div class="header-top"> 
       	 <div class="container"> 
-			<ul class="top-left-menu">
-			  <li><img src="<?php echo get_template_directory_uri();  ?>/images/phone.png" alt=""><a href="#">(920-268-8471)</a></li>
-			  <li><img src="<?php echo get_template_directory_uri();  ?>/images/career.png" alt=""><a href="#">CAREERS</a></li>
-			  <li><img src="<?php echo get_template_directory_uri();  ?>/images/write.png" alt=""><a href="#">WRITE FOR US</a></li>
-			</ul>
-			<ul class="top-right-menu">
-			  <li><img src="<?php echo get_template_directory_uri();  ?>/images/account.png" alt=""><a href="#">MY ACCOUNT</a></li>
-			  <li><img src="<?php echo get_template_directory_uri();  ?>/images/register.png" alt=""><a href="#">REGISTER</a></li>
-			  <li><img src="<?php echo get_template_directory_uri();  ?>/images/upload.png" alt=""><a href="#">UPLOAD</a></li>
-			</ul>
+			<?php 
+
+		  	wp_nav_menu([
+		  		'theme_location'	=> 'left-menu',
+		  		'menu_class'		=> 'top-left-menu',
+		  		'fallback_cb'		=> 'left_menu',
+		  		'container'			=> false,
+		  	]);
+
+
+
+		  	wp_nav_menu([
+		  		'theme_location'	=> 'right-menu',
+		  		'menu_class'		=> 'top-right-menu',
+		  		'fallback_cb'		=> 'right_menu',
+		  		'container'			=> false,
+		  	]);
+
+		  	 ?>
+
       	</div>
       </div>
       <header>  
 		<nav class="navbar navbar-expand-lg navbar-light bg-light header-top-fixed">
 		  <div class="container"> 
-			<a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri();  ?>/images/logo.png" alt="" /></a>
-		  
+
+		  	<?php $header_logo =  get_field('header_logo','options'); 
+			if($header_logo):  ?>
+			<a class="navbar-brand" href="<?php echo bloginfo('home'); ?>"><img src="<?php echo $header_logo['url']; ?>" alt="<?php echo $header_logo['title']; ?>" /></a>
+		  	<?php endif; ?>
 			<div class="toogle-button"> 
 				<a class="navbar-toggler" href="#navbarSupportedContent" id="toggle" data-toggle="collapse" ><span></span></a>
 			</div>
 			
 			
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav">
-			  <li class="current-menu-item"><a href="#">Home</a></li>
-			  <li><a href="#">Services</a></li>
-			  <li><a href="#">Themes</a></li>
-			  <li><a href="#">News</a></li>
-			  <li><a href="#">Avout Unvetica</a></li>
-			  <li><a href="#">Contact Us</a></li>
-			</ul>
+		  	<?php 
+
+		  	wp_nav_menu([
+		  		'theme_location'	=> 'main-menu',
+		  		'menu_class'		=> 'navbar-nav',
+		  		'fallback_cb'		=> 'default_menu',
+		  	]);
+
+		  	 ?>
 			
 			
 			<div class="right-contact"> 
-				<a href="tel:+6494461709">
+
+				<?php $contact_number =  get_field('contact_number','options'); 
+				if($contact_number):  ?>
+				<a href="tel:+<?php echo $contact_number ?>">
 				<img src="<?php echo get_template_directory_uri();  ?>/images/contact-us.png" alt="">
 				<div class="text-number"> 
 					<span class="contact-text">CONTACT US</span>
-					<span class="contact-number">8-100-234-45-67</span>
+					<span class="contact-number"><?php echo $contact_number ?></span>
 				</div>
 				</a>
+				<?php endif; ?>
+
 			</div>
 		  </div>
 		  </div>
 		</nav>
 	   </header>
 	
+	<?php $website_layout =  get_field('website_layout','options'); 
 
+
+
+
+	if($website_layout == 'full'): 	  ?>
+	 <div>
+	 <?php endif; 
+
+	 	if($website_layout == 'box'): 
+	 	?>
 	 <div class="side-space">
-		<div class="banner-area"> 
+	 <?php endif; ?>
+	 <?php $banner_background =  get_field('banner_background','options'); ?>
+		<div class="banner-area" style="background-image: url(<?php echo $banner_background['url']; ?>);"> 
 		  	<div class="banner-color"> 
 				<div class="container"> 
 					<div class="unvetica-logo"> 
-						<img src="<?php echo get_template_directory_uri();  ?>/images/unvetica-logo.png" alt="">
+						<?php $banner_logo =  get_field('banner_logo','options'); 
+						if($banner_logo): ?>
+						<img src="<?php echo $banner_logo['url']; ?>" alt="<?php echo $banner_logo['title']; ?>">
+						 <?php endif; ?>
 					</div>
 					<div class="row banner-content"> 
 						<div class="col-lg-6 col-md-12"> 
 							<div class="banner-text"> 
-								<h2><span>un/vet’/i/ke | </span>verb, noun</h2>
-								<h3>/ THE ACT OF DEVELOPING <br>
-	  							 HUMAN SOLUTION</h3>
-	  							 <h3>/ NOT HELVETICA</h3>
+								<?php $banner_left_content =  get_field('banner_left_content','options'); 
+								if($banner_left_content): echo $banner_left_content; ?>
 
-	  							 <a href="#">get started</a>
+
+							
+	  							<?php endif; ?>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12"> 
-							<div class="banner-video">
+						<div class="col-lg-6 col-md-12">
+						<?php $video_thumbnail =  get_field('video_thumbnail','options'); 
+							if($video_thumbnail): ?> 
+							<div class="banner-video" style="background-image: url(<?php echo $video_thumbnail['url']; ?>);">
 									
 							<!-- Button trigger modal  -->
 							<a data-toggle="modal" href="#exampleModalCenter">
@@ -116,8 +155,12 @@
 							        
 							   
 							      <div class="modal-body">
+
+
+
+									
 							       <iframe id="player" type="text/html" width="100%" height="390"
-									  src="<?php echo get_template_directory_uri();  ?>/http://www.youtube.com/embed/_6IO62oQfaU?enablejsapi=1"
+									  src="http://www.youtube.com/embed/_6IO62oQfaU?enablejsapi=1"
 									  frameborder="0"></iframe>
 							      </div>
 							      
@@ -125,10 +168,15 @@
 							  </div>
 							</div>
 							</div>
-
+							<?php endif; ?>
 							<div class="banner-indicator"> 
 								<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/images/next1.png" alt=""></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/images/next2.png" alt=""></a>
+
+								<?php $video_banner =  get_field('video_banner','options'); 
+										 ?> 
+
+										 <h2>hello<?php echo wp_oembed_get($video_banner);  ?></h2>
 							</div>
 						</div>
 					</div>

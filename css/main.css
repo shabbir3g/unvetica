@@ -267,7 +267,6 @@ header {
 }
 
 .banner-area{
-  background-image: url(../images/banner-bg.png);
   background-size: 100% 100%;
 }
 
@@ -293,16 +292,34 @@ header {
   font-size: 16px;
    font-family: 'BebasNeueBold';
 }
-.right-sidebar{
+.right-sidebar {
   position: absolute;
-  right: -84px;
+  right: -120px;
   top: 60%;
   transform: rotate(90deg);
 }
-.right-sidebar p{
+.right-sidebar ul{
+  margin: 0;
+  padding: 0;
+}
+.right-sidebar ul li{
+  float: left;
+  padding: 0px 5px;
+  list-style: none;
+}
+.right-sidebar ul li:after{
+  content:'/';
+  color: #fff;
+  padding-left:10px;
+}
+.right-sidebar ul li:last-child:after{
+  content:'';
+}
+.right-sidebar ul li a{
   color: #fff;
   font-size: 16px;
-   font-family: 'BebasNeueBold';
+  font-family: 'BebasNeueBold';
+  text-decoration: none;
 }
 .unvetica-logo {
   width: 80%;
@@ -356,7 +373,7 @@ header {
   text-decoration: none;
 }
 .banner-video{
-  background-image: url(../images/banner-video-bg.png);
+  
   background-size: 100% 100%;
   height: 350px;
   width: 100%;

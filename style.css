@@ -10,3 +10,7 @@ License URI: LICENSE
 Text Domain: unvetica
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-unvetica
 */
+
+._mi._before._image {
+	height: inherit;
+}

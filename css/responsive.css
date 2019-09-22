@@ -254,11 +254,11 @@ header {
 	.left-sidebar p {
 		font-size: 14px;
 	}
-	.right-sidebar p {
+	.right-sidebar ul li a {
 		font-size: 14px;
 	}
-	.right-sidebar {
-	right: -77px;
+.right-sidebar {
+	right: -122px;
 }
 .banner-text {
 	color: #fff;
