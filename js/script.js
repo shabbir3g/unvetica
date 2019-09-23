@@ -5,6 +5,25 @@
 
 
 
+
+	/*$('form.domain-check input[name="check"]').click(function(){
+
+		$.post('domain-name.php','', function(out){
+
+
+			$(".ppp").text(out);
+
+
+
+		});
+
+
+		return false;
+	}); */
+
+
+
+
 $(".blog-posts .owl-carousel").owlCarousel({
 		loop: true,
 		margin: 40,

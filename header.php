@@ -31,7 +31,7 @@
 	
 		<?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php   body_class(); ?>>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -156,28 +156,31 @@
 							   
 							      <div class="modal-body">
 
+									
 
+										<?php $video_banner =  get_field('video_banner','options'); 
+										if($video_banner):  echo $video_banner; ?> 
+				
+
+										<?php endif; ?>
 
 									
-							       <iframe id="player" type="text/html" width="100%" height="390"
-									  src="http://www.youtube.com/embed/_6IO62oQfaU?enablejsapi=1"
-									  frameborder="0"></iframe>
+							  
 							      </div>
 							      
 							    </div>
 							  </div>
 							</div>
 							</div>
-							<?php endif; ?>
+							
 							<div class="banner-indicator"> 
 								<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/images/next1.png" alt=""></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();  ?>/images/next2.png" alt=""></a>
+									
+									
 
-								<?php $video_banner =  get_field('video_banner','options'); 
-										 ?> 
-
-										 <h2>hello<?php echo wp_oembed_get($video_banner);  ?></h2>
 							</div>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
